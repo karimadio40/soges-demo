@@ -1,8 +1,14 @@
-﻿import React from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import type { Easing } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import accountingImg from '../../assets/service_accounting.png';
+import creationImg from '../../assets/service_creation.png';
+import commerceImg from '../../assets/service_commerce.png';
+import negoceImg from '../../assets/service_negoce.png';
+import formationImg from '../../assets/service_formation.png';
+import fiscalImg from '../../assets/service_fiscal.png';
 import './Services.css';
 
 const EASE: Easing = 'easeOut';
@@ -10,8 +16,8 @@ const EASE: Easing = 'easeOut';
 const serviceData = [
   {
     key: 'accounting',
-    image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80',
-    color: '#FF5500',
+    image: accountingImg,
+    color: '#3D8C72',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
@@ -23,8 +29,8 @@ const serviceData = [
   },
   {
     key: 'creation',
-    image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&q=80',
-    color: '#A8421A',
+    image: creationImg,
+    color: '#4DAA87',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <rect x="2" y="7" width="20" height="14" rx="2"/>
@@ -36,8 +42,8 @@ const serviceData = [
   },
   {
     key: 'commerce',
-    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80',
-    color: '#4DAA87',
+    image: commerceImg,
+    color: '#3D8C72',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="9" cy="21" r="1"/>
@@ -48,8 +54,8 @@ const serviceData = [
   },
   {
     key: 'negoce',
-    image: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=600&q=80',
-    color: '#FF5500',
+    image: negoceImg,
+    color: '#4DAA87',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <line x1="12" y1="1" x2="12" y2="23"/>
@@ -59,8 +65,8 @@ const serviceData = [
   },
   {
     key: 'formation',
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80',
-    color: '#A8421A',
+    image: formationImg,
+    color: '#3D8C72',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
@@ -70,7 +76,7 @@ const serviceData = [
   },
   {
     key: 'fiscal',
-    image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80',
+    image: fiscalImg,
     color: '#4DAA87',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

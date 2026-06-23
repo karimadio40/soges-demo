@@ -1,19 +1,25 @@
-﻿import React from 'react';
+import React from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
 import ContactSection from '../components/Contact/ContactSection';
+import accountingImg from '../assets/service_accounting.png';
+import creationImg from '../assets/service_creation.png';
+import commerceImg from '../assets/service_commerce.png';
+import negoceImg from '../assets/service_negoce.png';
+import formationImg from '../assets/service_formation.png';
+import fiscalImg from '../assets/service_fiscal.png';
 import './ServiceDetailPage.css';
 
 const serviceImages: Record<string, string> = {
-  accounting: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&q=80',
-  creation: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=1200&q=80',
-  commerce: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&q=80',
-  negoce: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=1200&q=80',
-  formation: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80',
-  fiscal: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&q=80',
+  accounting: accountingImg,
+  creation: creationImg,
+  commerce: commerceImg,
+  negoce: negoceImg,
+  formation: formationImg,
+  fiscal: fiscalImg,
 };
 
 const serviceOrder = ['accounting', 'creation', 'commerce', 'negoce', 'formation', 'fiscal'];

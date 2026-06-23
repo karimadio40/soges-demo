@@ -8,11 +8,11 @@
 /* ---------- DARK THEME (default) ---------- */
 :root {
   /* Brand */
-  --color-primary: #FF5500;
-  --color-primary-dark: #CC4400;
-  --color-primary-light: #FF7733;
-  --color-primary-glow: rgba(255, 85, 0, 0.35);
-  --color-primary-subtle: rgba(255, 85, 0, 0.10);
+  --color-primary: #3D8C72;
+  --color-primary-dark: #2F7059;
+  --color-primary-light: #4DAA87;
+  --color-primary-glow: rgba(61, 140, 114, 0.35);
+  --color-primary-subtle: rgba(61, 140, 114, 0.10);
 
   /* Backgrounds */
   --color-bg-dark: #0A0A0A;
@@ -37,7 +37,7 @@
   --bg-card: rgba(255, 255, 255, 0.03);
   --bg-card-hover: rgba(255, 255, 255, 0.06);
   --border-subtle: rgba(255, 255, 255, 0.05);
-  --border-card-hover: rgba(255, 85, 0, 0.4);
+  --border-card-hover: rgba(61, 140, 114, 0.4);
   --text-on-primary: #FFFFFF;
 
   /* Shadows */
@@ -327,7 +327,7 @@ input, textarea, select {
 
 /* ---------- Gradient Text ---------- */
 .gradient-text {
-  background: linear-gradient(135deg, var(--color-primary), #FF8844);
+  background: linear-gradient(135deg, var(--color-primary), #7CC9AF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
