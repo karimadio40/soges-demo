@@ -82,6 +82,14 @@ const Navbar: React.FC = () => {
         {/* Right controls */}
         <div className="navbar__controls">
 
+          <button className="navbar__cta" onClick={() => scrollTo('contact')}>
+            {t('nav.contact')}
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="16" height="16">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+
           {/* Theme toggle */}
           <motion.button
             className={`navbar__theme-toggle navbar__theme-toggle--${theme}`}
@@ -155,7 +163,7 @@ const Navbar: React.FC = () => {
                 onClick={toggleTheme}
               >
                 {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
-                <span>{theme === 'dark' ? 'Thème clair' : 'Thème sombre'}</span>
+                <span>{theme === 'dark' ? 'ThÃ¨me clair' : 'ThÃ¨me sombre'}</span>
               </button>
             </div>
 
@@ -173,3 +181,4 @@ const Navbar: React.FC = () => {
 };
 
 export default Navbar;
+

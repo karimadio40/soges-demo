@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import type { Easing } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
@@ -70,11 +70,7 @@ const AboutSection: React.FC = () => {
           custom={0}
         >
           <span className="section-label">{t('about.label')}</span>
-          <h2 className="section-title">
-            {t('about.title')}{' '}
-            <span>{t('about.titleHighlight')}</span>
-          </h2>
-          <div className="divider" />
+          {/* Title moved to content right side */}
         </motion.div>
 
         <div className="about__grid">
@@ -91,8 +87,8 @@ const AboutSection: React.FC = () => {
             <div className="about__image-placeholder">
               <div className="about__image-inner">
                 <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="40" cy="30" r="18" stroke="#F26A1F" strokeWidth="2"/>
-                  <path d="M10 72c0-16.57 13.43-30 30-30s30 13.43 30 30" stroke="#F26A1F" strokeWidth="2" strokeLinecap="round"/>
+                  <circle cx="40" cy="30" r="18" stroke="#FF5500" strokeWidth="2"/>
+                  <path d="M10 72c0-16.57 13.43-30 30-30s30 13.43 30 30" stroke="#FF5500" strokeWidth="2" strokeLinecap="round"/>
                 </svg>
                 <p className="about__image-label">Photo à ajouter</p>
               </div>
@@ -116,15 +112,26 @@ const AboutSection: React.FC = () => {
             </div>
           </motion.div>
 
-          {/* Right — Text + values */}
+          {/* Right — Text + Stats */}
           <div className="about__content">
+            <motion.h2
+              className="about__main-title"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: '-80px' }}
+              variants={fadeInUp}
+              custom={0.2}
+            >
+              {t('about.title')} <span>{t('about.titleHighlight')}</span>
+            </motion.h2>
+
             <motion.p
               className="about__text"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: '-80px' }}
               variants={fadeInUp}
-              custom={0.2}
+              custom={0.25}
             >
               {t('about.p1')}
             </motion.p>
@@ -139,40 +146,68 @@ const AboutSection: React.FC = () => {
               {t('about.p2')}
             </motion.p>
 
-            {/* Values grid */}
-            <motion.h3
-              className="about__values-title"
+            {/* Video-style Stats */}
+            <motion.div 
+              className="about__stats-row"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: '-80px' }}
               variants={fadeInUp}
-              custom={0.35}
+              custom={0.4}
             >
-              {t('about.values.title')}
-            </motion.h3>
-            <div className="about__values">
-              {values.map(({ key, icon }, i) => (
-                <motion.div
-                  key={key}
-                  className="about__value-card glass-card"
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, margin: '-60px' }}
-                  variants={fadeInUp}
-                  custom={0.4 + i * 0.08}
-                >
-                  <div className="about__value-icon">{icon}</div>
-                  <div>
-                    <h4 className="about__value-name">
-                      {t(`about.values.${key}.title`)}
-                    </h4>
-                    <p className="about__value-desc">
-                      {t(`about.values.${key}.desc`)}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
+              <div className="about__stat-item">
+                <span className="about__stat-val">200+</span>
+                <span className="about__stat-lbl">Clients satisfaits</span>
+              </div>
+              <div className="about__stat-item">
+                <span className="about__stat-val">10+</span>
+                <span className="about__stat-lbl">Années d'expérience</span>
+              </div>
+              <div className="about__stat-item">
+                <span className="about__stat-val">6+</span>
+                <span className="about__stat-lbl">Services offerts</span>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </div>
+
+      {/* Values Section - Full Width Wavy Background */}
+      <div className="about__values-section">
+        <div className="about__wavy-bg" />
+        <div className="container">
+          <motion.h3
+            className="about__values-title"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-80px' }}
+            variants={fadeInUp}
+            custom={0.1}
+          >
+            {t('about.values.title')}
+          </motion.h3>
+          <div className="about__values-grid">
+            {values.map(({ key, icon }, i) => (
+              <motion.div
+                key={key}
+                className="about__value-card glass-card"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: '-60px' }}
+                variants={fadeInUp}
+                custom={0.2 + i * 0.1}
+              >
+                <div className="about__value-icon">{icon}</div>
+                <div>
+                  <h4 className="about__value-name">
+                    {t(`about.values.${key}.title`)}
+                  </h4>
+                  <p className="about__value-desc">
+                    {t(`about.values.${key}.desc`)}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </div>
@@ -181,3 +216,4 @@ const AboutSection: React.FC = () => {
 };
 
 export default AboutSection;
+

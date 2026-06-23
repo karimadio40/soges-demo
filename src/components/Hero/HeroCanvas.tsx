@@ -13,7 +13,7 @@ function ParticleField() {
     const positions = new Float32Array(count * 3);
     const colors = new Float32Array(count * 3);
 
-    const orangeColor = new THREE.Color('#F26A1F');
+    const orangeColor = new THREE.Color('#FF5500');
     const whiteColor = new THREE.Color('#FFFFFF');
 
     for (let i = 0; i < count; i++) {
@@ -75,14 +75,14 @@ function CoreSphere() {
       {/* Glow halo */}
       <mesh ref={glowRef}>
         <sphereGeometry args={[0.95, 32, 32]} />
-        <meshBasicMaterial color="#F26A1F" transparent opacity={0.1} side={THREE.BackSide} />
+        <meshBasicMaterial color="#FF5500" transparent opacity={0.1} side={THREE.BackSide} />
       </mesh>
       {/* Core sphere */}
       <mesh ref={meshRef}>
         <sphereGeometry args={[0.7, 64, 64]} />
         <meshStandardMaterial
-          color="#F26A1F"
-          emissive="#C9521A"
+          color="#FF5500"
+          emissive="#CC4400"
           emissiveIntensity={0.6}
           roughness={0.15}
           metalness={0.8}
@@ -105,7 +105,7 @@ function OrbitRing({ radius, speed, tilt }: { radius: number; speed: number; til
     <group ref={groupRef} rotation={[tilt, 0, 0]}>
       <mesh>
         <torusGeometry args={[radius, 0.006, 16, 120]} />
-        <meshBasicMaterial color="#F26A1F" transparent opacity={0.35} />
+        <meshBasicMaterial color="#FF5500" transparent opacity={0.35} />
       </mesh>
       {/* Orbiting dot */}
       <mesh position={[radius, 0, 0]}>
@@ -121,7 +121,7 @@ function Scene() {
   return (
     <>
       <ambientLight intensity={0.4} />
-      <pointLight position={[5, 5, 5]} intensity={1.5} color="#F26A1F" />
+      <pointLight position={[5, 5, 5]} intensity={1.5} color="#FF5500" />
       <pointLight position={[-5, -5, -5]} intensity={0.6} color="#FFFFFF" />
       <CoreSphere />
       <ParticleField />
@@ -148,3 +148,4 @@ const HeroCanvas: React.FC = () => {
 };
 
 export default HeroCanvas;
+

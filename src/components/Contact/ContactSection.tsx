@@ -106,30 +106,36 @@ const ContactSection: React.FC = () => {
   ];
 
   return (
-    <section className="contact section bg-dark" id="contact">
-      <div className="contact__orb" />
+    <section className="contact bg-dark" id="contact">
+      {/* Top Banner (Like Siwa's Let's Connect) */}
+      <div className="contact__banner">
+        <div className="contact__banner-bg" />
+        <div className="contact__banner-overlay" />
+        <div className="container contact__banner-content">
+          <motion.h2 
+            className="contact__banner-title"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            {t('contact.title')} {t('contact.titleHighlight')}
+          </motion.h2>
+          <motion.p
+            className="contact__banner-subtitle"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            {t('contact.subtitle')}
+          </motion.p>
+        </div>
+      </div>
 
-      <div className="container">
-        {/* Header */}
-        <motion.div
-          className="contact__header"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-80px' }}
-          variants={fadeInUp}
-          custom={0}
-        >
-          <span className="section-label">{t('contact.label')}</span>
-          <h2 className="section-title">
-            {t('contact.title')}{' '}
-            <span>{t('contact.titleHighlight')}</span>
-          </h2>
-          <div className="divider" />
-          <p className="section-subtitle">{t('contact.subtitle')}</p>
-        </motion.div>
-
+      <div className="container contact__main">
         <div className="contact__grid">
-          {/* Left — Info */}
+          {/* Left â€” Info */}
           <motion.div
             className="contact__info"
             initial="hidden"
@@ -194,7 +200,7 @@ const ContactSection: React.FC = () => {
             </div>
           </motion.div>
 
-          {/* Right — Form */}
+          {/* Right â€” Form */}
           <motion.div
             className="contact__form-wrapper glass-card"
             initial="hidden"
@@ -263,7 +269,7 @@ const ContactSection: React.FC = () => {
                         <option key={s} value={s}>{s}</option>
                       ))}
                     </select>
-                    {errors.service && <span className="contact__error">Veuillez sélectionner un service</span>}
+                    {errors.service && <span className="contact__error">Veuillez sÃ©lectionner un service</span>}
                   </div>
                 </div>
 
@@ -304,3 +310,4 @@ const ContactSection: React.FC = () => {
 };
 
 export default ContactSection;
+

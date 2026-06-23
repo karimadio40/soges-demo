@@ -1,24 +1,24 @@
 /* ============================================
-   FPBA-CI — Global CSS Design System
+   SOGES â€” Global CSS Design System
    Themes: Dark (default) + Light (orange & blanc)
-   Couleur principale : Orange #F26A1F
+   Couleur principale : Orange #FF5500
    Font: Inter
    ============================================ */
 
 /* ---------- DARK THEME (default) ---------- */
 :root {
   /* Brand */
-  --color-primary: #F26A1F;
-  --color-primary-dark: #C9521A;
-  --color-primary-light: #FF8C45;
-  --color-primary-glow: rgba(242, 106, 31, 0.35);
-  --color-primary-subtle: rgba(242, 106, 31, 0.10);
+  --color-primary: #FF5500;
+  --color-primary-dark: #CC4400;
+  --color-primary-light: #FF7733;
+  --color-primary-glow: rgba(255, 85, 0, 0.35);
+  --color-primary-subtle: rgba(255, 85, 0, 0.10);
 
   /* Backgrounds */
-  --color-bg-dark: #0E0B08;
-  --color-bg-card: #1C1612;
-  --color-bg-card-hover: #2A201A;
-  --color-surface: #161210;
+  --color-bg-dark: #0A0A0A;
+  --color-bg-card: #141414;
+  --color-bg-card-hover: #1A1A1A;
+  --color-surface: #121212;
 
   /* Text */
   --color-white: #FFFFFF;
@@ -32,36 +32,36 @@
   --color-text-muted: rgba(255, 255, 255, 0.42);
 
   /* Semantic aliases used across components */
-  --bg-page: #0E0B08;
-  --bg-section-alt: #16110D;
-  --bg-card: rgba(255, 255, 255, 0.04);
-  --bg-card-hover: rgba(255, 255, 255, 0.07);
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-card-hover: rgba(242, 106, 31, 0.4);
+  --bg-page: #0A0A0A;
+  --bg-section-alt: #0F0F0F;
+  --bg-card: rgba(255, 255, 255, 0.03);
+  --bg-card-hover: rgba(255, 255, 255, 0.06);
+  --border-subtle: rgba(255, 255, 255, 0.05);
+  --border-card-hover: rgba(255, 85, 0, 0.4);
   --text-on-primary: #FFFFFF;
 
   /* Shadows */
-  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.4);
-  --shadow-card-hover: 0 8px 40px rgba(242, 106, 31, 0.22);
-  --shadow-glow: 0 0 40px rgba(242, 106, 31, 0.3);
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.5);
+  --shadow-card-hover: 0 8px 40px rgba(255, 85, 0, 0.15);
+  --shadow-glow: 0 0 40px rgba(255, 85, 0, 0.3);
 
   /* Navbar */
-  --navbar-bg-scrolled: rgba(14, 11, 8, 0.94);
+  --navbar-bg-scrolled: rgba(10, 10, 10, 0.94);
   --navbar-border: rgba(255, 255, 255, 0.06);
   --navbar-link-color: rgba(255, 255, 255, 0.75);
   --navbar-lang-bg: rgba(255, 255, 255, 0.06);
   --navbar-lang-border: rgba(255, 255, 255, 0.14);
-  --navbar-mobile-bg: rgba(14, 11, 8, 0.97);
+  --navbar-mobile-bg: rgba(10, 10, 10, 0.97);
 
   /* Input */
   --input-bg: rgba(255, 255, 255, 0.05);
   --input-border: rgba(255, 255, 255, 0.1);
   --input-placeholder: rgba(255, 255, 255, 0.3);
-  --input-focus-bg: rgba(242, 106, 31, 0.06);
-  --select-option-bg: #1C1612;
+  --input-focus-bg: rgba(255, 85, 0, 0.06);
+  --select-option-bg: #141414;
 
   /* Footer */
-  --footer-bg: #14100C;
+  --footer-bg: #0C0C0C;
   --footer-border: rgba(255, 255, 255, 0.06);
   --footer-social-bg: rgba(255, 255, 255, 0.05);
   --footer-social-border: rgba(255, 255, 255, 0.08);
@@ -104,7 +104,7 @@
 
 /* ---------- LIGHT THEME (orange & blanc) ---------- */
 [data-theme="light"] {
-  /* Backgrounds — chaud blanc cassé */
+  /* Backgrounds â€” chaud blanc cassÃ© */
   --color-bg-dark: #FFFFFF;
   --color-bg-card: #FFF7F1;
   --color-bg-card-hover: #FFE9D6;
@@ -122,43 +122,43 @@
   --color-text-muted: rgba(31, 20, 12, 0.42);
 
   /* Primary reste orange */
-  --color-primary-subtle: rgba(242, 106, 31, 0.12);
-  --color-primary-glow: rgba(242, 106, 31, 0.25);
+  --color-primary-subtle: rgba(61, 140, 114, 0.12);
+  --color-primary-glow: rgba(61, 140, 114, 0.25);
 
   /* Semantic aliases */
   --bg-page: #FFFFFF;
   --bg-section-alt: #FFF8F2;
-  --bg-card: rgba(242, 106, 31, 0.06);
-  --bg-card-hover: rgba(242, 106, 31, 0.1);
-  --border-subtle: rgba(242, 106, 31, 0.16);
-  --border-card-hover: rgba(242, 106, 31, 0.45);
+  --bg-card: rgba(61, 140, 114, 0.06);
+  --bg-card-hover: rgba(61, 140, 114, 0.1);
+  --border-subtle: rgba(61, 140, 114, 0.16);
+  --border-card-hover: rgba(61, 140, 114, 0.45);
   --text-on-primary: #FFFFFF;
 
   /* Shadows */
-  --shadow-card: 0 4px 24px rgba(242, 106, 31, 0.10);
-  --shadow-card-hover: 0 8px 40px rgba(242, 106, 31, 0.22);
-  --shadow-glow: 0 0 40px rgba(242, 106, 31, 0.20);
+  --shadow-card: 0 4px 24px rgba(61, 140, 114, 0.10);
+  --shadow-card-hover: 0 8px 40px rgba(61, 140, 114, 0.22);
+  --shadow-glow: 0 0 40px rgba(61, 140, 114, 0.20);
 
   /* Navbar */
   --navbar-bg-scrolled: rgba(255, 255, 255, 0.95);
-  --navbar-border: rgba(242, 106, 31, 0.16);
+  --navbar-border: rgba(61, 140, 114, 0.16);
   --navbar-link-color: rgba(31, 20, 12, 0.72);
-  --navbar-lang-bg: rgba(242, 106, 31, 0.07);
-  --navbar-lang-border: rgba(242, 106, 31, 0.22);
+  --navbar-lang-bg: rgba(61, 140, 114, 0.07);
+  --navbar-lang-border: rgba(61, 140, 114, 0.22);
   --navbar-mobile-bg: rgba(255, 255, 255, 0.98);
 
   /* Input */
-  --input-bg: rgba(242, 106, 31, 0.05);
-  --input-border: rgba(242, 106, 31, 0.20);
+  --input-bg: rgba(61, 140, 114, 0.05);
+  --input-border: rgba(61, 140, 114, 0.20);
   --input-placeholder: rgba(31, 20, 12, 0.3);
-  --input-focus-bg: rgba(242, 106, 31, 0.07);
+  --input-focus-bg: rgba(61, 140, 114, 0.07);
   --select-option-bg: #FFF8F2;
 
   /* Footer */
   --footer-bg: #FFF8F2;
-  --footer-border: rgba(242, 106, 31, 0.14);
-  --footer-social-bg: rgba(242, 106, 31, 0.07);
-  --footer-social-border: rgba(242, 106, 31, 0.20);
+  --footer-border: rgba(61, 140, 114, 0.14);
+  --footer-social-bg: rgba(61, 140, 114, 0.07);
+  --footer-social-border: rgba(61, 140, 114, 0.20);
   --footer-social-color: rgba(31, 20, 12, 0.6);
   --footer-link-color: rgba(31, 20, 12, 0.55);
   --footer-text-muted: rgba(31, 20, 12, 0.4);
@@ -244,7 +244,7 @@ input, textarea, select {
   text-transform: uppercase;
   color: var(--color-primary);
   background: var(--color-primary-subtle);
-  border: 1px solid rgba(242, 106, 31, 0.25);
+  border: 1px solid rgba(255, 85, 0, 0.25);
   padding: var(--space-1) var(--space-4);
   border-radius: var(--border-radius-full);
   margin-bottom: var(--space-4);
@@ -287,12 +287,12 @@ input, textarea, select {
 .btn-primary {
   background: var(--color-primary);
   color: #FFFFFF;
-  box-shadow: 0 0 24px rgba(242, 106, 31, 0.4);
+  box-shadow: 0 0 24px rgba(255, 85, 0, 0.4);
 }
 
 .btn-primary:hover {
   background: var(--color-primary-dark);
-  box-shadow: 0 0 38px rgba(242, 106, 31, 0.6);
+  box-shadow: 0 0 38px rgba(255, 85, 0, 0.6);
   transform: translateY(-2px);
 }
 
@@ -327,7 +327,7 @@ input, textarea, select {
 
 /* ---------- Gradient Text ---------- */
 .gradient-text {
-  background: linear-gradient(135deg, var(--color-primary), #FFB07A);
+  background: linear-gradient(135deg, var(--color-primary), #FF8844);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -358,7 +358,7 @@ input, textarea, select {
 
 /* ---------- Selection ---------- */
 ::selection {
-  background: rgba(242, 106, 31, 0.28);
+  background: rgba(255, 85, 0, 0.28);
   color: var(--color-text-primary);
 }
 
@@ -403,3 +403,4 @@ input, textarea, select {
   :root { --section-padding-y: var(--space-16); }
   .container { padding: 0 var(--space-4); }
 }
+

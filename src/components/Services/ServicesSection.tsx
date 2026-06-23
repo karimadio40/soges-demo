@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { motion } from 'framer-motion';
 import type { Easing } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
@@ -11,7 +11,7 @@ const serviceData = [
   {
     key: 'accounting',
     image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80',
-    color: '#F26A1F',
+    color: '#FF5500',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
@@ -37,7 +37,7 @@ const serviceData = [
   {
     key: 'commerce',
     image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80',
-    color: '#FF8C45',
+    color: '#4DAA87',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="9" cy="21" r="1"/>
@@ -49,7 +49,7 @@ const serviceData = [
   {
     key: 'negoce',
     image: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=600&q=80',
-    color: '#F26A1F',
+    color: '#FF5500',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <line x1="12" y1="1" x2="12" y2="23"/>
@@ -71,7 +71,7 @@ const serviceData = [
   {
     key: 'fiscal',
     image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80',
-    color: '#FF8C45',
+    color: '#4DAA87',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
@@ -167,3 +167,4 @@ const ServicesSection: React.FC = () => {
 };
 
 export default ServicesSection;
+

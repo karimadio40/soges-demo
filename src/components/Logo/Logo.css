@@ -1,4 +1,4 @@
-.logo {
+﻿.logo {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -24,7 +24,7 @@
   transform: scale(1.06);
 }
 
-/* The actual image — square crop of the logo */
+/* The actual image â€” square crop of the logo */
 .logo__img {
   display: block;
   object-fit: cover;
@@ -70,3 +70,4 @@
 /* Size variants text */
 .logo--sm .logo__name { font-size: 0.95rem; }
 .logo--lg .logo__name { font-size: 1.3rem; }
+

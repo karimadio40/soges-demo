@@ -84,19 +84,6 @@ const HeroSection: React.FC = () => {
             </button>
           </motion.div>
 
-          {/* Stats */}
-          <motion.div className="hero__stats" custom={0.7} variants={fadeUp}>
-            {[
-              { value: '200+', label: t('hero.stats.clients') },
-              { value: '10+', label: t('hero.stats.years') },
-              { value: '6', label: t('hero.stats.services') },
-            ].map((stat, i) => (
-              <div className="hero__stat" key={i}>
-                <span className="hero__stat-value">{stat.value}</span>
-                <span className="hero__stat-label">{stat.label}</span>
-              </div>
-            ))}
-          </motion.div>
         </motion.div>
       </div>
 
@@ -115,3 +102,4 @@ const HeroSection: React.FC = () => {
 };
 
 export default HeroSection;
+

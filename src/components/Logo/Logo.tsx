@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import logoImg from '../../assets/logo.jpg';
 import './Logo.css';
 
@@ -9,7 +9,7 @@ interface LogoProps {
 
 const Logo: React.FC<LogoProps> = ({ size = 'md', onClick }) => {
   return (
-    <button className={`logo logo--${size}`} onClick={onClick} aria-label="SOGES — Accueil">
+    <button className={`logo logo--${size}`} onClick={onClick} aria-label="SOGES â€” Accueil">
       <div className="logo__mark">
         <img
           src={logoImg}
@@ -26,3 +26,4 @@ const Logo: React.FC<LogoProps> = ({ size = 'md', onClick }) => {
 };
 
 export default Logo;
+

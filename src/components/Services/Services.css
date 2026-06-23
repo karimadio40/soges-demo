@@ -13,7 +13,7 @@
 .services__line--1 {
   width: 1px;
   height: 100%;
-  background: linear-gradient(to bottom, transparent, #F26A1F, transparent);
+  background: linear-gradient(to bottom, transparent, #FF5500, transparent);
   left: 25%;
   top: 0;
 }
@@ -21,7 +21,7 @@
 .services__line--2 {
   width: 1px;
   height: 100%;
-  background: linear-gradient(to bottom, transparent, #F26A1F, transparent);
+  background: linear-gradient(to bottom, transparent, #FF5500, transparent);
   right: 25%;
   top: 0;
 }
@@ -32,16 +32,27 @@
   max-width: 680px;
 }
 
-/* Grid */
+/* Grid / Carousel */
 .services__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  overflow-x: auto;
   gap: 28px;
+  padding-bottom: 32px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+}
+
+.services__grid::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
 }
 
 /* Card */
 .services__card {
   position: relative;
+  min-width: 360px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
   border-radius: 20px;
   overflow: hidden;
   background: var(--bg-card);
@@ -182,18 +193,18 @@
 
 /* Responsive */
 @media (max-width: 1024px) {
-  .services__grid {
-    grid-template-columns: repeat(2, 1fr);
+  .services__card {
+    min-width: 320px;
   }
 }
 
 @media (max-width: 600px) {
-  .services__grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
+  .services__card {
+    min-width: 280px;
   }
 
   .services__card-img-wrap {
     height: 180px;
   }
 }
+

@@ -1,4 +1,4 @@
-﻿/* ---- About Section ---- */
+/* ---- About Section ---- */
 .about {
   position: relative;
   overflow: hidden;
@@ -73,7 +73,7 @@
   position: absolute;
   bottom: -16px;
   right: -16px;
-  background: linear-gradient(135deg, #F26A1F, #C9521A);
+  background: linear-gradient(135deg, #FF5500, #CC4400);
   border-radius: 16px;
   padding: 18px 22px;
   display: flex;
@@ -110,7 +110,7 @@
   width: 50px;
   height: 50px;
   flex-shrink: 0;
-  background: linear-gradient(135deg, #F26A1F, #C9521A);
+  background: linear-gradient(135deg, #FF5500, #CC4400);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -152,25 +152,89 @@
   gap: 4px;
 }
 
+.about__main-title {
+  font-size: clamp(2rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+  color: var(--color-text-primary);
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.about__main-title span {
+  background: linear-gradient(135deg, #FF5500 0%, #FF8844 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .about__text {
-  font-size: 1rem;
+  font-size: 1.05rem;
   color: var(--color-text-secondary);
   line-height: 1.8;
   margin-bottom: 16px;
 }
 
-.about__values-title {
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--color-white);
-  margin: 16px 0 20px;
+/* Stats Row */
+.about__stats-row {
+  display: flex;
+  gap: 32px;
+  margin-top: 24px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border-subtle);
 }
 
-/* Values grid */
-.about__values {
+.about__stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.about__stat-val {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.about__stat-lbl {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+}
+
+/* Values Section (Full Width) */
+.about__values-section {
+  position: relative;
+  margin-top: 100px;
+  padding: 80px 0;
+  overflow: hidden;
+  background: var(--bg-section-alt);
+}
+
+.about__wavy-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 50%, rgba(61, 140, 114, 0.08) 0%, transparent 50%),
+              radial-gradient(circle at 70% 80%, rgba(124, 201, 175, 0.05) 0%, transparent 50%);
+  filter: blur(40px);
+  z-index: 0;
+}
+
+.about__values-title {
+  position: relative;
+  z-index: 1;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.about__values-grid {
+  position: relative;
+  z-index: 1;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
 }
 
 .about__value-card {
@@ -225,7 +289,9 @@
 }
 
 @media (max-width: 560px) {
-  .about__values {
-    grid-template-columns: 1fr;
+  .about__stats-row {
+    flex-wrap: wrap;
+    gap: 24px;
   }
 }
+

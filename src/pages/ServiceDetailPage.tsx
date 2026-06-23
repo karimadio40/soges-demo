@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
@@ -72,7 +72,7 @@ const ServiceDetailPage: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.15 }}
             >
-              <h2 className="sdp__section-title">À propos de ce service</h2>
+              <h2 className="sdp__section-title">Ã€ propos de ce service</h2>
               <p className="sdp__desc">{fullDesc}</p>
 
               <h2 className="sdp__section-title">Ce que nous proposons</h2>
@@ -108,8 +108,8 @@ const ServiceDetailPage: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.25 }}
             >
               <div className="sdp__cta-box">
-                <h3>Intéressé par ce service ?</h3>
-                <p>Contactez-nous dès aujourd'hui pour un diagnostic gratuit et une offre personnalisée.</p>
+                <h3>IntÃ©ressÃ© par ce service ?</h3>
+                <p>Contactez-nous dÃ¨s aujourd'hui pour un diagnostic gratuit et une offre personnalisÃ©e.</p>
                 <Link to="/#contact" className="btn btn-primary sdp__cta-btn">
                   Demander un devis
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -144,7 +144,7 @@ const ServiceDetailPage: React.FC = () => {
                   <path d="M19 12H5M12 19l-7-7 7-7"/>
                 </svg>
                 <div>
-                  <span>Précédent</span>
+                  <span>PrÃ©cÃ©dent</span>
                   <strong>{t(`services.items.${prevKey}.title`)}</strong>
                 </div>
               </Link>
@@ -171,3 +171,4 @@ const ServiceDetailPage: React.FC = () => {
 };
 
 export default ServiceDetailPage;
+
