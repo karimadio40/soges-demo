@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import type { Easing } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import './About.css';
+import aboutImg from '../../assets/img4.jpg';
 
 const EASE: Easing = 'easeOut';
 
@@ -83,15 +84,9 @@ const AboutSection: React.FC = () => {
             variants={fadeInUp}
             custom={0.15}
           >
-            {/* Image placeholder */}
-            <div className="about__image-placeholder">
-              <div className="about__image-inner">
-                <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="40" cy="30" r="18" stroke="#FF5500" strokeWidth="2"/>
-                  <path d="M10 72c0-16.57 13.43-30 30-30s30 13.43 30 30" stroke="#FF5500" strokeWidth="2" strokeLinecap="round"/>
-                </svg>
-                <p className="about__image-label">Photo à ajouter</p>
-              </div>
+            {/* Image wrapper */}
+            <div className="about__image-wrapper">
+              <img src={aboutImg} alt="À propos de nous" className="about__image" />
               {/* Badge */}
               <div className="about__badge">
                 <span className="about__badge-num">10+</span>

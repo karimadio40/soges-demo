@@ -5,12 +5,12 @@ import { useTranslation } from 'react-i18next';
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
 import ContactSection from '../components/Contact/ContactSection';
-import accountingImg from '../assets/service_accounting.png';
-import creationImg from '../assets/service_creation.png';
-import commerceImg from '../assets/service_commerce.png';
-import negoceImg from '../assets/service_negoce.png';
-import formationImg from '../assets/service_formation.png';
-import fiscalImg from '../assets/service_fiscal.png';
+import accountingImg from '../assets/img1.webp';
+import creationImg from '../assets/img2.webp';
+import commerceImg from '../assets/img11.webp';
+import negoceImg from '../assets/img3.webp';
+import formationImg from '../assets/img4.jpg';
+import fiscalImg from '../assets/img9.webp';
 import './ServiceDetailPage.css';
 
 const serviceImages: Record<string, string> = {
@@ -58,7 +58,7 @@ const ServiceDetailPage: React.FC = () => {
             >
               <Link to="/#services" className="sdp__back">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M19 12H5M12 19l-7-7 7-7"/>
+                  <path d="M19 12H5M12 19l-7-7 7-7" />
                 </svg>
                 Nos services
               </Link>
@@ -87,7 +87,7 @@ const ServiceDetailPage: React.FC = () => {
                   <li key={i} className="sdp__feature-item">
                     <span className="sdp__feature-check">
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                        <polyline points="20 6 9 17 4 12"/>
+                        <polyline points="20 6 9 17 4 12" />
                       </svg>
                     </span>
                     {feature}
@@ -98,7 +98,7 @@ const ServiceDetailPage: React.FC = () => {
               <div className="sdp__why-box">
                 <h3 className="sdp__why-title">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+                    <circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" />
                   </svg>
                   Pourquoi ce service est essentiel
                 </h3>
@@ -119,7 +119,7 @@ const ServiceDetailPage: React.FC = () => {
                 <Link to="/#contact" className="btn btn-primary sdp__cta-btn">
                   Demander un devis
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                    <path d="M5 12h14M12 5l7 7-7 7" />
                   </svg>
                 </Link>
               </div>
@@ -132,7 +132,7 @@ const ServiceDetailPage: React.FC = () => {
                       <Link to={`/services/${k}`} className="sdp__other-link">
                         <span>{t(`services.items.${k}.title`)}</span>
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M5 12h14M12 5l7 7-7 7"/>
+                          <path d="M5 12h14M12 5l7 7-7 7" />
                         </svg>
                       </Link>
                     </li>
@@ -147,7 +147,7 @@ const ServiceDetailPage: React.FC = () => {
             {prevKey ? (
               <Link to={`/services/${prevKey}`} className="sdp__nav-btn sdp__nav-btn--prev">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M19 12H5M12 19l-7-7 7-7"/>
+                  <path d="M19 12H5M12 19l-7-7 7-7" />
                 </svg>
                 <div>
                   <span>PrÃ©cÃ©dent</span>
@@ -162,7 +162,7 @@ const ServiceDetailPage: React.FC = () => {
                   <strong>{t(`services.items.${nextKey}.title`)}</strong>
                 </div>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                  <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
               </Link>
             ) : <div />}

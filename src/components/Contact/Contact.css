@@ -56,7 +56,7 @@
 .contact__banner-title {
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 800;
-  color: var(--color-white);
+  color: #ffffff;
   line-height: 1.1;
   margin-bottom: 24px;
 }
@@ -70,7 +70,7 @@
 
 .contact__banner-subtitle {
   font-size: clamp(1rem, 2vw, 1.25rem);
-  color: var(--color-white-90);
+  color: rgba(255, 255, 255, 0.9);
   line-height: 1.6;
 }
 

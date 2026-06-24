@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion'; import type { Easing } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import './HeroSection.css';
+import heroBg from '../../assets/img4.jpg';
+
 
 const EASE: Easing = 'easeOut';
 
@@ -23,6 +25,7 @@ const HeroSection: React.FC = () => {
 
   return (
     <section className="hero" id="home">
+      <div className="hero__bg" style={{ backgroundImage: `url(${heroBg})` }} />
 
       {/* Gradient overlays */}
       <div className="hero__overlay hero__overlay--left" />
@@ -70,7 +73,7 @@ const HeroSection: React.FC = () => {
               </svg>
             </button>
             <button
-              className="btn btn-outline"
+              className="btn btn-outline hero__btn-outline"
               onClick={() => scrollToSection('contact')}
             >
               {t('hero.cta_secondary')}
