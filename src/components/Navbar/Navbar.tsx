@@ -61,8 +61,10 @@ const Navbar: React.FC = () => {
     { key: 'contact', id: 'contact' },
   ];
 
+  const isTransparentOnDark = !scrolled;
+
   return (
-    <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''} navbar--${theme}`}>
+    <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''} ${isTransparentOnDark ? 'navbar--transparent-dark' : ''} navbar--${theme}`}>
       <div className="container navbar__inner">
 
         {/* Logo */}
